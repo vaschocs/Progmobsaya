@@ -3,19 +3,22 @@ package com.example.proteintracker;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link protein#newInstance} factory method to
+ * Use the {@link Protein2Fragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class protein extends Fragment {
+public class Protein2Fragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -26,7 +29,7 @@ public class protein extends Fragment {
     private String mParam2;
 
 
-    public protein() {
+    public Protein2Fragment() {
         // Required empty public constructor
     }
 
@@ -36,11 +39,11 @@ public class protein extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment protein.
+     * @return A new instance of fragment Protein2Fragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static protein newInstance(String param1, String param2) {
-        protein fragment = new protein();
+    public static Protein2Fragment newInstance(String param1, String param2) {
+        Protein2Fragment fragment = new Protein2Fragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -58,10 +61,17 @@ public class protein extends Fragment {
     }
 
     @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        TextView txtView = getView().findViewById(R.id.txtViewFragment2);
+        txtView.setText(mParam1 + " --- "+ mParam2);
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_protein, container, false);
+        return inflater.inflate(R.layout.fragment_protein2, container, false);
     }
 
 }

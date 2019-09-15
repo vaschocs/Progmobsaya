@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.example.proteintracker.R;
+
 public class Main2Activity extends AppCompatActivity {
 
     @Override
@@ -15,4 +17,3 @@ public class Main2Activity extends AppCompatActivity {
     }
 
 }
-

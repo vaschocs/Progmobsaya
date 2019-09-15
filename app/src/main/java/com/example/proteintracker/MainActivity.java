@@ -24,19 +24,37 @@ public class MainActivity extends AppCompatActivity {
         Button helpBtn = (Button)findViewById(R.id.helpButton);
         helpBtn.setOnClickListener(helpButtonListener);
 
-        Button btnLayout = (Button)findViewById(R.id.btnLayout);
 
-        btnLayout.setOnClickListener(new View.OnClickListener(){
+        Button layoutButton = (Button)findViewById(R.id.layoutButton);
+        Button buttonMahasiswa = (Button)findViewById(R.id.mahasiswaButton);;
+        Button fragmentButton = (Button)findViewById(R.id.fragmentButton);
+        Button appButton = (Button)findViewById(R.id.appButton);
+
+
+
+        layoutButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 Intent i = new Intent(MainActivity.this,Main2Activity.class);
                 startActivity(i);
             }
         });
-        if(savedInstanceState != null){      //jika di rotate maka layout dn nilai akan ttp tersimpan
-            Log.d("ProteinTracker",savedInstanceState.getString("abc"));
-        }
 
+        fragmentButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent i = new Intent(MainActivity.this,Main3FragmentActivity.class);
+                startActivity(i);
+            }
+        });
+
+        appButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent i = new Intent(MainActivity.this,ProteinTrackerAppActivity.class);
+                startActivity(i);
+            }
+        });
 
         Button myBtn = (Button)findViewById(R.id.button1);
         myBtn.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +65,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
     private View.OnClickListener myBtnClickListener = new View.OnClickListener()
     {
         //   myBtn.setOnClickListener(myBtnClickListener);
@@ -70,6 +90,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
     };
+
+
+
+
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
