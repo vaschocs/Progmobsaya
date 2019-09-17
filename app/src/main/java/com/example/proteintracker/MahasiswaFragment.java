@@ -1,6 +1,5 @@
 package com.example.proteintracker;
 
-
 import android.content.Context;
 import android.os.Bundle;
 
@@ -17,10 +16,11 @@ import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ProteinFragment#newInstance} factory method to
+ * Use the {@link MahasiswaFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ProteinFragment extends Fragment {
+public class MahasiswaFragment extends Fragment {
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -32,7 +32,7 @@ public class ProteinFragment extends Fragment {
 
     SendMessage sm;
 
-    public ProteinFragment() {
+    public MahasiswaFragment() {
         // Required empty public constructor
     }
 
@@ -45,8 +45,8 @@ public class ProteinFragment extends Fragment {
      * @return A new instance of fragment ProteinFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ProteinFragment newInstance(String param1, String param2) {
-        ProteinFragment fragment = new ProteinFragment();
+    public static MahasiswaFragment newInstance(String param1, String param2) {
+        MahasiswaFragment fragment = new MahasiswaFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -66,16 +66,30 @@ public class ProteinFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        TextView txtNamaFragment = getView().findViewById(R.id.txtNamaFragment);
-        txtNamaFragment.setText(mParam1 + ", "+ mParam2);
+        // TextView txtNamaFragment = getView().findViewById(R.id.txtNamaFragment);
+        // txtNamaFragment.setText(mParam1 + ", "+ mParam2);
 
-        Button btnPassData = (Button) view.findViewById(R.id.btnFragment1);
-        btnPassData.setOnClickListener(new View.OnClickListener() {
+        Button btnAdd1 = (Button)view.findViewById(R.id.insertButton);
+        Button btnUpdate1 = (Button)view.findViewById(R.id.updateButton);
+        Button btnDel1 = (Button)view.findViewById(R.id.deleteButton);
+
+        btnAdd1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sm.SendData("NICE");
+                sm.SendData1("yy");
             }
-
+        });
+        btnDel1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sm.SendData1("yy");
+            }
+        });
+        btnUpdate1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sm.SendData1("yy");
+            }
         });
     }
 
@@ -92,10 +106,11 @@ public class ProteinFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_protein, container, false);
+        return inflater.inflate(R.layout.fragment_mahasiswa, container, false);
     }
     interface SendMessage{
-        void SendData(String Message);
+        void SendData1(String Message);
     }
 }
