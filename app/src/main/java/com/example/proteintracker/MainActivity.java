@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         Button fragmentButton = (Button)findViewById(R.id.fragmentButton);
         Button mahasiswaButton = (Button)findViewById(R.id.mahasiswaButton);
         Button appButton = (Button)findViewById(R.id.appButton);
+        Button listButton = (Button)findViewById(R.id.listButton);
 
 
 
@@ -37,6 +38,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 Intent i = new Intent(MainActivity.this,Main2Activity.class);
+                startActivity(i);
+            }
+        });
+
+        listButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent i = new Intent(MainActivity.this,ListActivity.class);
                 startActivity(i);
             }
         });
