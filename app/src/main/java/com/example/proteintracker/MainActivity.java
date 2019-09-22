@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         Button mahasiswaButton = (Button)findViewById(R.id.mahasiswaButton);
         Button appButton = (Button)findViewById(R.id.appButton);
         Button listButton = (Button)findViewById(R.id.listButton);
+        Button keloladataButton = (Button)findViewById(R.id.keloladataButton);
 
 
 
@@ -46,6 +47,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 Intent i = new Intent(MainActivity.this,ListActivity.class);
+                startActivity(i);
+            }
+        });
+
+
+
+        keloladataButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent i = new Intent(MainActivity.this,MahasiswaList.class);
                 startActivity(i);
             }
         });
