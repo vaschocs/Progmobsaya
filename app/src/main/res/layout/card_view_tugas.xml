@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="122dp">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="98dp"
+            android:layout_height="125dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars[14]" />
+
+        <TextView
+            android:id="@+id/txtNama"
+            android:layout_width="327dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Nama"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtNim"
+            android:layout_width="337dp"
+            android:layout_height="20dp"
+            android:text="NIM"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/image"
+            app:layout_constraintTop_toBottomOf="@+id/txtNama" />
+
+        <TextView
+            android:id="@+id/txtJK"
+            android:layout_width="329dp"
+            android:layout_height="20dp"
+            android:text="JK"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txtNim"
+            app:layout_constraintTop_toBottomOf="@+id/txtNim" />
+
+        <TextView
+            android:id="@+id/txtCita"
+            android:layout_width="329dp"
+            android:layout_height="20dp"
+            android:text="Cita-Cita"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txtNim"
+            app:layout_constraintTop_toBottomOf="@+id/txtJK" />
+
+        <TextView
+            android:id="@+id/txtHobby"
+            android:layout_width="317dp"
+            android:layout_height="20dp"
+            android:text="Hobby"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txtNim"
+            app:layout_constraintTop_toBottomOf="@+id/txtCita" />
+
+        <TextView
+            android:id="@+id/txtMotto"
+            android:layout_width="319dp"
+            android:layout_height="20dp"
+            android:text="Motto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/image"
+            app:layout_constraintTop_toBottomOf="@+id/txtHobby" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
